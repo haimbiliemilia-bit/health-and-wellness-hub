@@ -2,275 +2,355 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Health & Wellness Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background: #f7f7f7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f7f6;
+      color: #1f2933;
+      line-height: 1.6;
     }
 
     header {
-      background: #ffffff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 50;
+      background: rgba(244,247,246,0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e1e7ea;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 20px;
-      color: #246b3f;
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.92rem;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 0.9rem;
+      align-items: center;
     }
 
     nav a {
-      margin-left: 25px;
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
+      color: #374151;
     }
 
     nav a:hover {
-      color: #2c8c4a;
+      color: #059669;
     }
 
+    .nav-cta {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: #16a34a;
+      color: #ecfdf3;
+      box-shadow: 0 10px 18px rgba(22, 163, 74, 0.25);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    /* Hero */
     .hero {
-      padding: 80px 40px;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      gap: 2.5rem;
       align-items: center;
-      background: #eef7f0;
+      margin-bottom: 3.5rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.1rem;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
     }
 
     .hero h1 {
-      font-size: 42px;
-      font-weight: 800;
-      color: #123;
-      max-width: 550px;
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #16a34a;
     }
 
     .hero p {
-      margin-top: 10px;
-      max-width: 500px;
-      line-height: 1.5;
+      font-size: 0.98rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tag {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #d1e2d6;
+      background: #f9fafb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
     }
 
     .btn-primary {
-      padding: 12px 24px;
-      background: #2e8b57;
-      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: #16a34a;
+      color: #f9fafb;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.3);
       text-decoration: none;
-      border-radius: 8px;
       display: inline-block;
-      margin-top: 20px;
-      font-weight: bold;
     }
 
     .btn-secondary {
-      padding: 12px 24px;
-      background: #444;
-      color: #fff;
+      padding: 0.65rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid #d1e2d6;
+      background: #ffffff;
+      color: #111827;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.9rem;
       text-decoration: none;
-      border-radius: 8px;
       display: inline-block;
-      margin-left: 10px;
-      font-weight: bold;
     }
 
-    .btn-primary:hover { background: #267548; }
-    .btn-secondary:hover { background: #222; }
-
-    .products {
-      padding: 60px 40px;
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
     }
 
-    .products h2 {
-      font-size: 32px;
-      text-align: center;
-      margin-bottom: 30px;
+    /* Hero card */
+    .hero-card {
+      border-radius: 1.5rem;
+      background: linear-gradient(145deg, #d1fae5, #ecfdf3);
+      padding: 1.6rem 1.5rem;
+      box-shadow: 0 20px 40px rgba(15, 118, 110, 0.25);
     }
 
-    .product-grid {
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ecfdf3;
+      font-size: 1.1rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #065f46;
+      font-weight: 700;
+    }
+
+    .hero-card-subtitle {
+      font-size: 0.8rem;
+      color: #047857;
+    }
+
+    .hero-specialities-title {
+      font-weight: 700;
+      margin: 0.6rem 0 0.9rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-bottom: 1.1rem;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      text-align: center;
+    .hero-chip {
+      font-size: 0.78rem;
+      padding: 0.65rem 0.7rem;
+      border-radius: 1rem;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 1px 4px rgba(15,23,42,0.08);
     }
 
-    .card img {
+    .hero-chip-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-chip-text {
+      font-size: 0.74rem;
+      color: #4b5563;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.3rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed rgba(16,185,129,0.5);
+      font-size: 0.8rem;
+    }
+
+    .hero-stat-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.68rem;
+      color: #065f46;
+    }
+
+    .hero-stat-value {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #022c22;
+    }
+
+    /* Products */
+    .section-heading {
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card img {
       width: 100%;
-      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
     }
 
-    .card h3 {
-      margin-top: 15px;
-      font-size: 22px;
-      color: #222;
+    .product-body {
+      padding: 0.9rem 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.88rem;
     }
 
-    .card p {
-      margin-top: 10px;
-      font-size: 15px;
+    .product-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #047857;
+      font-weight: 700;
     }
 
-    .shop-section {
-      padding: 70px 40px;
-      background: #dff3e5;
-      text-align: center;
+    .product-title {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #111827;
     }
 
-    .join-section {
-      padding: 70px 40px;
-      background: #fdeccf;
-      text-align: center;
+    .product-text {
+      color: #4b5563;
+      font-size: 0.82rem;
     }
 
-    footer {
-      padding: 40px;
-      text-align: center;
-      background: #222;
-      color: #ddd;
-      margin-top: 40px;
-    }
-
-    .contact-line {
-      margin-top: 8px;
-      font-size: 16px;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: #fff;
-      padding: 14px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">HEALTH & WELLNESS HUB</div>
-
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#shop">Shop Online</a>
-    <a href="#join">Join Forever</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div>
-    <h1>Nourish your body with Forever Living & organic wellness.</h1>
-    <p>Your trusted source for high-quality aloe products, natural supplements and wellness essentials delivered worldwide.</p>
-
-    <a class="btn-primary"
-       href="https://foreverliving.com/shop/zaf/en-za/products"
-       target="_blank">Shop Online</a>
-
-    <a class="btn-secondary"
-       href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom"
-       target="_blank">Join the Business</a>
-  </div>
-</section>
-
-<section id="products" class="products">
-  <h2>Featured Wellness Products</h2>
-
-  <div class="product-grid">
-
-    <!-- Card 1 -->
-    <div class="card">
-      <img src="0E23B03D-409A-42D2-AFB4-90CF90FBDBE5.PNG" alt="Vitolize for Women">
-      <h3>Hormone Support – Vitolize Women</h3>
-      <p>Supports hormonal balance, reproductive health and female wellness.</p>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <img src="7F313331-F9C3-49A4-ACA5-9642998AD220.PNG" alt="Aloe Vera Gel">
-      <h3>Aloe Vera Gel – Immunity & Digestion</h3>
-      <p>Boosts immunity, supports digestion, promotes full-body wellness.</p>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <img src="76B0B50E-A0BC-48AE-9F8B-2AB13A0354C9.PNG" alt="Multi Maca for Men">
-      <h3>Men’s Vitality – Multi-Maca</h3>
-      <p>Supports stamina, energy, reproductive & physical performance.</p>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card">
-      <img src="PHOTO-2025-10-23-15-34-29 4.jpg" alt="Aloe Vera Gel Drink">
-      <h3>Aloe Vera Gel Drink</h3>
-      <p>Healthy digestion, natural energy support & immune balance.</p>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="card">
-      <img src="664487321-9819f968a4e39ffc4ded60e5bc4d188dc20d81d885c0815d7c06709d8c121b9b-d_640.avif" alt="Marine Collagen">
-      <h3>Forever Marine Collagen</h3>
-      <p>Radiant skin, hydration, anti-aging support & beauty from within.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="shop" class="shop-section">
-  <h2>Shop Forever Living Products Online</h2>
-  <p>Order directly from the official Forever Living online store — ships worldwide.</p>
-
-  <a class="btn-primary"
-     href="https://foreverliving.com/shop/zaf/en-za/products"
-     target="_blank">Visit Online Shop</a>
-</section>
-
-<section id="join" class="join-section">
-  <h2>Start Your Forever Living Business</h2>
-  <p>Earn income, enjoy discounted products, and build a lifestyle of freedom & wellness.</p>
-
-  <a class="btn-secondary"
-     href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom"
-     target="_blank">Join Forever Now</a>
-</section>
-
-<footer id="contact">
-  <h3>Contact Us</h3>
-  <div class="contact-line">📍 Windhoek, Namibia</div>
-  <div class="contact-line">📞 WhatsApp: +264 81 402 3718</div>
-  <div class="contact-line">📧 haimbiliemilia@gmail.com</div>
-
-  <p style="margin-top:20px;">
-    <a style="color:#aad" href="https://foreverliving.com/shop/zaf/en-za/products" target="_blank">Shop Online</a> |
-    <a style="color:#aad" href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom" target="_blank">Join Forever</a>
-  </p>
-
-  <p style="margin-top:10px;">© 2025 Health & Wellness Hub</p>
-</footer>
-
-<a class="whatsapp-btn" href="https://wa.me/264814023718" target="_blank">WhatsApp Us</a>
-
-</body>
-</html>
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top:
