@@ -2,1001 +2,752 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Health and Wellness Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Health and Wellness Hub – Forever Living products, organic items and natural wellness essentials."
-  />
+  <title>Health & Wellness Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root {
-      --green: #2f855a;
-      --green-light: #c6f6d5;
-      --bg: #f7fafc;
-      --text: #1a202c;
-      --accent: #38b2ac;
-      --white: #ffffff;
-      --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.08);
-      --radius-xl: 18px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f7f6;
+      color: #1f2933;
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* Layout */
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Navbar */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(247, 250, 252, 0.95);
+      background: rgba(244,247,246,0.98);
       backdrop-filter: blur(10px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid #e1e7ea;
     }
 
-    .nav {
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 0;
     }
 
-    .logo-wrap {
+    .brand {
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.92rem;
     }
 
-    .logo-circle {
-      width: 40px;
-      height: 40px;
+    .brand-logo {
+      width: 32px;
+      height: 32px;
       border-radius: 999px;
-      background: var(--green);
+      background: linear-gradient(135deg, #16a34a, #22c55e);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
-    .logo-text-main {
-      font-weight: 700;
-      letter-spacing: 0.06em;
+      color: #f9fafb;
+      font-weight: 800;
       font-size: 0.9rem;
-      text-transform: uppercase;
     }
 
-    .logo-text-sub {
-      font-size: 0.8rem;
-      color: #4a5568;
-    }
-
-    .nav-links {
+    nav ul {
       display: flex;
       gap: 1.5rem;
+      list-style: none;
       font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
 
-    .nav-links a {
-      position: relative;
-      padding-bottom: 0.2rem;
+    nav a {
+      text-decoration: none;
+      color: #374151;
     }
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: var(--green);
-      transition: width 0.2s ease;
+    nav a:hover {
+      color: #059669;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .btn-nav {
+    .nav-cta {
       padding: 0.45rem 0.9rem;
       border-radius: 999px;
-      background: var(--green);
-      color: var(--white);
-      font-size: 0.85rem;
       border: none;
       cursor: pointer;
-      box-shadow: 0 6px 15px rgba(47, 133, 90, 0.35);
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: #16a34a;
+      color: #ecfdf3;
+      box-shadow: 0 10px 18px rgba(22, 163, 74, 0.25);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
     }
 
     /* Hero */
     .hero {
-      padding: 3.5rem 0 3rem;
-    }
-
-    .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
       gap: 2.5rem;
       align-items: center;
+      margin-bottom: 3.5rem;
     }
 
-    .hero-tag {
+    .pill {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: var(--green-light);
-      padding: 0.3rem 0.9rem;
+      padding: 0.25rem 0.7rem;
       border-radius: 999px;
-      font-size: 0.8rem;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.75rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.12em;
       margin-bottom: 1.1rem;
     }
 
-    .hero-tag span {
+    .pill-dot {
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: var(--green);
+      background: #22c55e;
     }
 
     .hero h1 {
-      font-size: clamp(2.1rem, 3vw, 2.6rem);
-      margin-bottom: 0.9rem;
-      color: #1a202c;
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
     }
 
     .hero h1 span {
-      color: var(--green);
+      color: #16a34a;
     }
 
-    .hero-lead {
-      font-size: 1rem;
-      color: #4a5568;
-      max-width: 520px;
+    .hero p {
+      font-size: 0.98rem;
+      color: #4b5563;
       margin-bottom: 1.5rem;
     }
 
-    .hero-highlights {
+    .hero-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .chip {
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid #cbd5e0;
-      font-size: 0.82rem;
-      background: #edf2f7;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: var(--white);
-      padding: 0.7rem 1.4rem;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 600;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--green);
-      padding: 0.65rem 1.2rem;
-      border-radius: 999px;
-      border: 1px solid var(--green);
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .hero-note {
-      font-size: 0.85rem;
-      color: #718096;
-    }
-
-    .hero-card {
-      background: var(--white);
-      border-radius: 24px;
-      padding: 1.7rem 1.6rem;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, #c6f6d5, transparent 55%);
-      opacity: 0.75;
-      pointer-events: none;
-    }
-
-    .hero-card-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .mini-logo {
-      display: flex;
-      align-items: center;
       gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tag {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #d1e2d6;
+      background: #f9fafb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
       margin-bottom: 1.2rem;
     }
 
-    .mini-leaf {
-      width: 28px;
-      height: 28px;
+    .btn-primary {
+      padding: 0.7rem 1.4rem;
       border-radius: 999px;
-      background: rgba(47, 133, 90, 0.1);
+      border: none;
+      background: #16a34a;
+      color: #f9fafb;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.3);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-secondary {
+      padding: 0.65rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid #d1e2d6;
+      background: #ffffff;
+      color: #111827;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    /* Hero card */
+    .hero-card {
+      border-radius: 1.5rem;
+      background: linear-gradient(145deg, #d1fae5, #ecfdf3);
+      padding: 1.6rem 1.5rem;
+      box-shadow: 0 20px 40px rgba(15, 118, 110, 0.25);
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #22c55e;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      color: #ecfdf3;
+      font-size: 1.1rem;
     }
 
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
+    .hero-card-title {
+      font-size: 0.82rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #4a5568;
+      letter-spacing: 0.18em;
+      color: #065f46;
+      font-weight: 700;
     }
 
-    .hero-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.4rem;
+    .hero-card-subtitle {
+      font-size: 0.8rem;
+      color: #047857;
     }
 
-    .hero-card p {
+    .hero-specialities-title {
+      font-weight: 700;
+      margin: 0.6rem 0 0.9rem;
       font-size: 0.9rem;
-      color: #4a5568;
-      margin-bottom: 1rem;
     }
 
     .hero-card-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
-      margin-bottom: 1.2rem;
+      gap: 0.7rem;
+      margin-bottom: 1.1rem;
     }
 
-    .hero-pill {
-      padding: 0.7rem 0.8rem;
-      border-radius: var(--radius-xl);
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid #e2e8f0;
+    .hero-chip {
+      font-size: 0.78rem;
+      padding: 0.65rem 0.7rem;
+      border-radius: 1rem;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 1px 4px rgba(15,23,42,0.08);
+    }
+
+    .hero-chip-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
       font-size: 0.8rem;
     }
 
-    .hero-pill strong {
-      display: block;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #4a5568;
-      margin-bottom: 0.2rem;
+    .hero-chip-text {
+      font-size: 0.74rem;
+      color: #4b5563;
     }
 
     .hero-stats {
       display: flex;
-      gap: 1.25rem;
+      justify-content: space-between;
+      margin-top: 0.3rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed rgba(16,185,129,0.5);
       font-size: 0.8rem;
-      color: #4a5568;
     }
 
-    .hero-stat strong {
-      display: block;
-      font-size: 1.1rem;
-      color: var(--green);
+    .hero-stat-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.68rem;
+      color: #065f46;
     }
 
-    /* Sections general */
-    section {
-      padding: 3rem 0;
-    }
-
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-    }
-
-    section .section-subtitle {
-      font-size: 0.95rem;
-      color: #4a5568;
-      margin-bottom: 2rem;
-      max-width: 520px;
-    }
-
-    /* About */
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .about-card {
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      padding: 1.5rem 1.6rem;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.92rem;
-      color: #4a5568;
-    }
-
-    .about-card h3 {
-      margin-bottom: 0.6rem;
-      font-size: 1.05rem;
-      color: var(--green);
-    }
-
-    .about-list {
-      list-style: none;
-      margin-top: 0.4rem;
-    }
-
-    .about-list li {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
+    .hero-stat-value {
+      font-weight: 700;
       font-size: 0.9rem;
-    }
-
-    .about-list li span {
-      color: var(--green);
-      margin-top: 0.15rem;
+      color: #022c22;
     }
 
     /* Products */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.4rem;
+    .section-heading {
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
     }
 
-    .card {
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      padding: 1.4rem 1.35rem;
-      box-shadow: var(--shadow-soft);
+    .section-sub {
       font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
     }
 
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #4a5568;
-      margin-bottom: 0.4rem;
-    }
-
-    .card ul {
-      list-style: none;
-      margin-top: 0.4rem;
-    }
-
-    .card ul li {
-      display: flex;
-      gap: 0.45rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .card ul li span {
-      color: var(--accent);
-      margin-top: 0.1rem;
-    }
-
-    /* Benefits */
-    .benefits-grid {
+    .products-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-body {
+      padding: 0.9rem 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
       font-size: 0.88rem;
     }
 
-    .benefit {
-      padding: 1.1rem 1.1rem;
-      border-radius: var(--radius-xl);
-      background: #edf2f7;
+    .product-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #047857;
+      font-weight: 700;
     }
 
-    .benefit h3 {
+    .product-title {
+      font-weight: 700;
       font-size: 0.98rem;
-      margin-bottom: 0.4rem;
+      color: #111827;
     }
 
-    /* Testimonials */
-    .testimonials {
-      background: #e6fffa;
-      border-radius: 24px;
-      padding: 1.7rem 1.6rem;
-      box-shadow: var(--shadow-soft);
+    .product-text {
+      color: #4b5563;
+      font-size: 0.82rem;
     }
 
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.2rem;
-      font-size: 0.9rem;
-    }
-
-    .quote {
-      position: relative;
-      padding-top: 0.7rem;
-    }
-
-    .quote::before {
-      content: "“";
-      position: absolute;
-      left: -4px;
-      top: -10px;
-      font-size: 2rem;
-      color: var(--accent);
-      opacity: 0.5;
-    }
-
-    .quote strong {
-      display: block;
-      margin-top: 0.6rem;
-      font-size: 0.85rem;
-      color: #2d3748;
-    }
-
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: start;
-    }
-
-    form {
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      padding: 1.5rem 1.6rem;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.9rem;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.9rem;
-    }
-
-    label {
-      display: block;
-      font-size: 0.8rem;
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.55rem 0.6rem;
-      border-radius: 10px;
-      border: 1px solid #cbd5e0;
-      font: inherit;
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .contact-info {
-      font-size: 0.9rem;
-      color: #4a5568;
-    }
-
-    .contact-info h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.6rem;
-      color: var(--green);
-    }
-
-    .info-line {
-      margin-bottom: 0.4rem;
-    }
-
-    .info-label {
-      font-weight: 600;
-    }
-
-    .whatsapp-badge {
-      display: inline-flex;
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.35rem;
-      padding: 0.4rem 0.75rem;
-      border-radius: 999px;
-      background: #e6fffa;
+      margin-top: 0.3rem;
       font-size: 0.8rem;
-      margin-top: 0.5rem;
+      color: #6b7280;
     }
 
-    /* Footer */
-    footer {
-      padding: 1.8rem 0 1.4rem;
-      font-size: 0.8rem;
-      color: #718096;
-      text-align: center;
+    .product-cta {
+      margin-top: 0.6rem;
+      display: flex;
+      justify-content: flex-start;
     }
 
-    footer a {
-      color: var(--green);
+    .product-cta a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: #047857;
       font-weight: 600;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-grid,
-      .about-grid,
-      .cards-grid,
-      .benefits-grid,
-      .testimonials-grid,
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    /* Contact / footer */
+    .contact {
+      border-radius: 1.4rem;
+      padding: 1.5rem 1.4rem;
+      background: linear-gradient(135deg, #0f766e, #16a34a);
+      color: #ecfdf3;
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) minmax(0, 2fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
 
-      .nav-links {
-        display: none;
-      }
+    .contact h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
 
+    .contact p {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      color: #e0f2f1;
+    }
+
+    .contact-details {
+      font-size: 0.86rem;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .contact-details a {
+      color: #bbf7d0;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .contact-actions .btn-primary {
+      box-shadow: 0 16px 32px rgba(15, 118, 110, 0.6);
+      background: #ecfdf3;
+      color: #065f46;
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: #e0f7fa;
+    }
+
+    footer {
+      padding: 1.2rem 1.25rem 1.8rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 860px) {
       .hero {
-        padding-top: 2.5rem;
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        order: -1;
+      }
+      .contact {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- NAV -->
   <header>
-    <div class="container">
-      <nav class="nav">
-        <div class="logo-wrap">
-          <div class="logo-circle">H</div>
-          <div>
-            <div class="logo-text-main">HEALTH &amp; WELLNESS</div>
-            <div class="logo-text-sub">Hub</div>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">H</div>
+        <div>
+          <div>Health &amp; Wellness</div>
+          <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:#6b7280;">
+            Forever Living &amp; organic items
           </div>
         </div>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#products">Products</a>
-          <a href="#benefits">Why us</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a href="#contact" class="btn-nav">Order / Enquire</a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
+      <a href="https://wa.me/264814023718" class="nav-cta">WhatsApp us</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="container hero-grid">
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="about">
       <div>
-        <div class="hero-tag">
-          <span></span> Natural wellness, delivered
+        <div class="pill">
+          <span class="pill-dot"></span>
+          Natural wellness, delivered
         </div>
         <h1>
-          Nourish your body with
-          <span>Forever Living</span> &amp> organic goodness.
+          Nourish your body with <span>Forever Living</span> &amp; organic
+          goodness.
         </h1>
-        <p class="hero-lead">
-          Health and Wellness Hub is your trusted source for Forever Living
-          products, clean supplements and organic everyday essentials — all
-          carefully chosen to support a healthier lifestyle.
+        <p>
+          Health and Wellness Hub is your trusted source for Forever Living products,
+          clean supplements and organic everyday essentials — carefully chosen to help
+          you live a healthier lifestyle in Windhoek and beyond.
         </p>
 
-        <div class="hero-highlights">
-          <div class="chip">Authorised Forever Living distributor</div>
-          <div class="chip">Organic &amp; natural items</div>
-          <div class="chip">Personal wellness guidance</div>
+        <div class="hero-tags">
+          <div class="hero-tag">Authorised Forever Living distributor</div>
+          <div class="hero-tag">Organic &amp; natural items</div>
+          <div class="hero-tag">Personal wellness guidance</div>
         </div>
 
-        <div class="hero-cta-row">
-          <a href="#products"><button class="btn-primary">Browse Products</button></a>
-          <a href="#contact"><button class="btn-outline">Talk to us</button></a>
+        <div class="hero-actions">
+          <a href="https://wa.me/264814023718" class="btn-primary">Browse via WhatsApp</a>
+          <a href="https://foreverliving.com/shop/zaf/en-za/products" class="btn-secondary" target="_blank">
+            Shop online
+          </a>
+          <a href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom"
+             class="btn-secondary" target="_blank">
+            Join the business
+          </a>
+          <a href="#contact" class="btn-secondary">Talk to us</a>
         </div>
+
         <div class="hero-note">
-          Free advice on product selection for your specific health and
-          wellness goals.
+          Free advice on product selection for your specific health and wellness goals.
         </div>
       </div>
 
-      <aside class="hero-card">
-        <div class="hero-card-inner">
-          <div class="mini-logo">
-            <div class="mini-leaf">🍃</div>
-            <div>
-              <div class="badge">Health &amp; Wellness Hub</div>
-              <div style="font-size:0.85rem;color:#2d3748;">
-                Natural products. Real results.
-              </div>
+      <aside class="hero-card" aria-label="What we specialise in">
+        <div class="hero-card-header">
+          <div class="badge-icon">✓</div>
+          <div>
+            <div class="hero-card-title">Health &amp; Wellness Hub</div>
+            <div class="hero-card-subtitle">Natural products. Real results.</div>
+          </div>
+        </div>
+
+        <div class="hero-specialities-title">What we specialise in</div>
+
+        <div class="hero-card-grid">
+          <div class="hero-chip">
+            <div class="hero-chip-title">Forever Living</div>
+            <div class="hero-chip-text">
+              Aloe drinks, supplements, skincare and more.
             </div>
           </div>
-          <h3>What we specialise in</h3>
-          <p>
-            From aloe-based Forever Living staples to carefully selected
-            organic foods and body products, we help you build sustainable
-            healthy habits.
-          </p>
-
-          <div class="hero-card-grid">
-            <div class="hero-pill">
-              <strong>Forever Living</strong>
-              Aloe drinks, supplements, skincare &amp; more.
+          <div class="hero-chip">
+            <div class="hero-chip-title">Organic items</div>
+            <div class="hero-chip-text">
+              Wholefoods, teas, oils and everyday wellness staples.
             </div>
-            <div class="hero-pill">
-              <strong>Organic items</strong>
-              Wholefoods, teas, oils &amp; everyday wellness.
+          </div>
+          <div class="hero-chip">
+            <div class="hero-chip-title">Wellness combos</div>
+            <div class="hero-chip-text">
+              Bundles for energy, immunity, detox and hormones.
             </div>
-            <div class="hero-pill">
-              <strong>Wellness combos</strong>
-              Bundles curated for energy, immunity &amp; detox.
-            </div>
-            <div class="hero-pill">
-              <strong>Guided support</strong>
+          </div>
+          <div class="hero-chip">
+            <div class="hero-chip-title">Guided support</div>
+            <div class="hero-chip-text">
               Recommendations based on your lifestyle and goals.
             </div>
           </div>
+        </div>
 
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>100%</strong>
-              Genuine products
-            </div>
-            <div class="hero-stat">
-              <strong>1:1</strong>
-              Customer support
-            </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-label">Genuine products</div>
+            <div class="hero-stat-value">100%</div>
+          </div>
+          <div>
+            <div class="hero-stat-label">Customer support</div>
+            <div class="hero-stat-value">1 : 1</div>
           </div>
         </div>
       </aside>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container about-grid">
-      <div>
-        <h2>About Health and Wellness Hub</h2>
-        <p class="section-subtitle">
-          Our mission is simple: make it easy and enjoyable to choose
-          healthier options every day. We blend trusted Forever Living
-          products with premium organic items, so you can care for your body
-          from the inside out.
-        </p>
-        <div class="about-card">
-          <h3>What we believe</h3>
-          <p>
-            Wellness is not a quick fix. It’s a daily choice powered by
-            quality nutrition, gentle movement and self-care. We’re here to
-            support your journey with products that are:
-          </p>
-          <ul class="about-list">
-            <li><span>✔</span> Carefully sourced and authentic</li>
-            <li><span>✔</span> Free from unnecessary additives</li>
-            <li><span>✔</span> Selected for real-life results</li>
-            <li><span>✔</span> Backed by friendly, honest guidance</li>
-          </ul>
-        </div>
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h2 class="section-heading">Featured wellness solutions</h2>
+      <p class="section-sub">
+        A small sample of what we offer from Forever Living and other quality brands.
+        Message us for personalised guidance.
+      </p>
+
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <article class="product-card">
+          <img src="0E23B03D-409A-42D2-AFB4-90CF90FBDBE5.PNG"
+               alt="Forever Vitalize and berry image to support hormone health" />
+          <div class="product-body">
+            <div class="product-tag">Hormone support</div>
+            <div class="product-title">Women’s hormone &amp; cycle balance</div>
+            <p class="product-text">
+              Combos designed to support women’s hormones, energy, mood and long-term
+              reproductive health.
+            </p>
+            <div class="product-meta">
+              <span>Great for PMS &amp; peri-menopause</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27m%20interested%20in%20the%20hormone%20support%20products.">
+                Ask about hormone support →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <img src="7F313331-F9C3-49A4-ACA5-9642998AD220.PNG"
+               alt="Forever aloe vera gel product poster" />
+          <div class="product-body">
+            <div class="product-tag">Aloe vera</div>
+            <div class="product-title">Pure aloe vera gel drinks</div>
+            <p class="product-text">
+              99.7% inner leaf aloe vera to support digestion, immunity and everyday
+              wellness from the inside out.
+            </p>
+            <div class="product-meta">
+              <span>Daily gut &amp; immune support</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27d%20like%20to%20know%20more%20about%20aloe%20vera%20gel%20drinks.">
+                Ask about aloe vera →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <img src="0433E067-F23A-45D7-BD71-44E2B6E3B646.PNG"
+               alt="Forever Multi Maca men’s vitality poster" />
+          <div class="product-body">
+            <div class="product-tag">Men’s vitality</div>
+            <div class="product-title">Energy, stamina &amp; performance</div>
+            <p class="product-text">
+              Forever Multi-Maca and supporting products for strength, stamina,
+              circulation and overall male wellness.
+            </p>
+            <div class="product-meta">
+              <span>Supports reproductive health</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27m%20interested%20in%20the%20men%27s%20vitality%20products.">
+                Ask about men’s packs →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <img src="76B0B50E-A0BC-48AE-9F8B-2AB13A0354C9.PNG"
+               alt="Aloe vera gel drink promotional image" />
+          <div class="product-body">
+            <div class="product-tag">Digestive health</div>
+            <div class="product-title">Aloe vera gel drinks &amp; bundles</div>
+            <p class="product-text">
+              Gentle support for digestion, nutrient absorption and natural energy
+              levels, ideal for the whole family.
+            </p>
+            <div class="product-meta">
+              <span>Family-friendly wellness</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27d%20like%20a%20bundle%20for%20digestion%20and%20energy.">
+                Build a wellness bundle →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card">
+          <img src="664487321-9819f968a4e39ffc4ded60e5bc4d188dc20d81d885c0815d7c06709d8c121b9b-d_640.avif"
+               alt="Forever Marine Collagen and other wellness products" />
+          <div class="product-body">
+            <div class="product-tag">Wellness combos</div>
+            <div class="product-title">Custom packs just for you</div>
+            <p class="product-text">
+              Not sure where to start? We create simple packs for immunity, hormones,
+              weight-management, skin health and more.
+            </p>
+            <div class="product-meta">
+              <span>Personalised recommendations</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27d%20like%20a%20personalised%20wellness%20combo.">
+                Get your custom combo →
+              </a>
+            </div>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="about-card">
-        <h3>How we work with you</h3>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div>
+        <h2>Let’s talk about your wellness goals</h2>
         <p>
-          Every person and every body is unique. Share your goals with us —
-          whether it’s more energy, better digestion, glowing skin or general
-          immune support — and we’ll suggest a simple, realistic product plan.
-        </p>
-        <ul class="about-list">
-          <li>
-            <span>➤</span>
-            New to Forever Living? We’ll help you start with the basics.
-          </li>
-          <li>
-            <span>➤</span>
-            Already using organic products? We’ll show you powerful add-ons.
-          </li>
-          <li>
-            <span>➤</span>
-            Prefer bundles? Ask about wellness packages for specific goals.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products -->
-  <section id="products">
-    <div class="container">
-      <h2>Our product range</h2>
-      <p class="section-subtitle">
-        Here’s an overview of what you’ll find at Health and Wellness Hub.
-        You can request a full catalogue or personalised recommendations any
-        time.
-      </p>
-
-      <div class="cards-grid">
-        <div class="card">
-          <div class="tag">Forever Living</div>
-          <h3>Aloe drinks &amp; supplements</h3>
-          <p>
-            Aloe-based nutrition and targeted supplements to support your
-            body from within.
-          </p>
-          <ul>
-            <li><span>•</span> Aloe Vera Gel &amp; aloe drinks</li>
-            <li><span>•</span> Nutritional &amp; weight management support</li>
-            <li><span>•</span> Immunity and energy products</li>
-            <li><span>•</span> Digestive health essentials</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="tag">Organic items</div>
-          <h3>Natural everyday essentials</h3>
-          <p>
-            Clean, minimally processed products you can use and enjoy every
-            day.
-          </p>
-          <ul>
-            <li><span>•</span> Herbal &amp; detox teas</li>
-            <li><span>•</span> Wholefoods &amp; healthy snacks</li>
-            <li><span>•</span> Natural oils, honey &amp; superfoods</li>
-            <li><span>•</span> Gentle body &amp; skincare items</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="tag">Bundles</div>
-          <h3>Goal-based wellness packs</h3>
-          <p>
-            Simple starter packages designed around real health and wellness
-            needs.
-          </p>
-          <ul>
-            <li><span>•</span> Immunity &amp; seasonal support pack</li>
-            <li><span>•</span> Daily energy &amp; focus pack</li>
-            <li><span>•</span> Gentle cleanse &amp; detox pack</li>
-            <li><span>•</span> Skin, hair &amp; glow pack</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section id="benefits">
-    <div class="container">
-      <h2>Why choose Health and Wellness Hub?</h2>
-      <p class="section-subtitle">
-        We know you have options. Here’s what makes us different when it
-        comes to Forever Living and organic products.
-      </p>
-
-      <div class="benefits-grid">
-        <div class="benefit">
-          <h3>Trusted sourcing</h3>
-          <p>
-            We only work with genuine Forever Living products and carefully
-            selected organic brands, so you can buy with confidence.
-          </p>
-        </div>
-        <div class="benefit">
-          <h3>Personalised guidance</h3>
-          <p>
-            Instead of guessing, you get honest advice on what suits your
-            goals, lifestyle and budget.
-          </p>
-        </div>
-        <div class="benefit">
-          <h3>Holistic approach</h3>
-          <p>
-            We look at the bigger picture — nutrition, energy, digestion and
-            everyday habits — not just single products.
-          </p>
-        </div>
-        <div class="benefit">
-          <h3>Accessible wellness</h3>
-          <p>
-            We offer options and bundles at different price points, so
-            healthier choices are always within reach.
-          </p>
-        </div>
-        <div class="benefit">
-          <h3>Education &amp; support</h3>
-          <p>
-            We explain how to use each product properly, and we’re happy to
-            answer follow-up questions.
-          </p>
-        </div>
-        <div class="benefit">
-          <h3>Community</h3>
-          <p>
-            Join our growing circle of customers who share tips, recipes and
-            healthy living inspiration.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section>
-    <div class="container testimonials">
-      <h2>What our customers say</h2>
-      <p class="section-subtitle">
-        Real experiences from people who’ve made gentle, consistent changes
-        with the help of our products.
-      </p>
-      <div class="testimonials-grid">
-        <div class="quote">
-          I started with one aloe drink and a simple bundle. Within weeks I
-          felt lighter, more energetic and less bloated.
-          <strong>— H.W. customer</strong>
-        </div>
-        <div class="quote">
-          I love that everything is natural and I can ask questions before I
-          buy. Their recommendations are honest and practical.
-          <strong>— Wellness client</strong>
-        </div>
-        <div class="quote">
-          The organic teas and Forever supplements have become part of my
-          daily routine. Health and Wellness Hub makes it easy.
-          <strong>— Returning customer</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container contact-grid">
-      <div>
-        <h2>Order &amp; enquiries</h2>
-        <p class="section-subtitle">
-          Ready to place an order, see our latest price list or ask a
-          question about a specific health goal? Send us a message and we’ll
-          respond as soon as we can.
+          Share what you’d like to improve — energy, hormones, digestion, skin,
+          weight, or general wellbeing — and we’ll suggest simple product options
+          that fit your lifestyle and budget.
         </p>
 
-        <form>
-          <div class="form-row">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
-            <div>
-              <label for="phone">Phone / WhatsApp</label>
-              <input id="phone" type="text" placeholder="+264 ..." />
-            </div>
+        <div class="contact-details">
+          <div><strong>Location:</strong> Windhoek, Namibia</div>
+          <div>
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/264814023718">+264&nbsp;81&nbsp;402&nbsp;3718</a>
           </div>
-
-          <div style="margin-top:0.9rem;">
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="you@example.com" />
+          <div>
+            <strong>Call:</strong>
+            <a href="tel:+264814023718">+264&nbsp;81&nbsp;402&nbsp;3718</a>
           </div>
-
-          <div style="margin-top:0.9rem;">
-            <label for="message">What can we help you with?</label>
-            <textarea
-              id="message"
-              placeholder="Tell us what you’re interested in (Forever Living products, organic foods, specific health goals, etc.)"
-            ></textarea>
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:haimbiliemilia@gmail.com">haimbiliemilia@gmail.com</a>
           </div>
-
-          <div style="margin-top:1.1rem;">
-            <button type="submit" class="btn-primary">
-              Send enquiry
-            </button>
+          <div>
+            <strong>Shop online:</strong>
+            <a href="https://foreverliving.com/shop/zaf/en-za/products" target="_blank">
+              Official Forever Living online shop
+            </a>
           </div>
-          <p style="margin-top:0.7rem;font-size:0.8rem;color:#718096;">
-            *This form is for demonstration. On a live site, connect it to
-            your email, WhatsApp or preferred contact method.
-          </p>
-        </form>
-      </div>
-
-      <div class="contact-info">
-        <h3>Contact details</h3>
-        <p class="info-line">
-          <span class="info-label">Business:</span>
-          Health and Wellness Hub
-        </p>
-        <p class="info-line">
-          <span class="info-label">Phone / WhatsApp:</span>
-          +264 XX XXX XXXX
-        </p>
-        <p class="info-line">
-          <span class="info-label">Email:</span>
-          hello@healthandwellnesshub.com
-        </p>
-        <p class="info-line">
-          <span class="info-label">Location:</span>
-          Your City, Country (update this)
-        </p>
-
-        <div class="whatsapp-badge">
-          <span>📲</span>
-          <span>Ask for our latest product catalogue via WhatsApp.</span>
+          <div>
+            <strong>Join the business:</strong>
+            <a href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom"
+               target="_blank">
+              Discover the Forever opportunity
+            </a>
+          </div>
+          <div>
+            <strong>Social media:</strong> Coming soon – we’ll share our pages once
+            they’re polished.
+          </div>
         </div>
-
-        <p style="margin-top:1.1rem;">
-          You can also follow us on social media for wellness tips, product
-          highlights and healthy living inspiration.
-        </p>
-        <p style="margin-top:0.5rem;">
-          <span class="info-label">Facebook / Instagram:</span>
-          @healthandwellnesshub (update with your real handles)
-        </p>
       </div>
-    </div>
-  </section>
+
+      <div class="contact-actions">
+        <a class="btn-primary"
+           href="https://wa.me/264814023718?text=Hi%20Emilia%2C%20I%27d%20like%20help%20choosing%20wellness%20products.">
+          Message us on WhatsApp
+        </a>
+        <div class="contact-note">
+          Available most days between 08:00–20:00 (Namibia time).  
+          We’ll reply as soon as we can.
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © <span id="year"></span> Health and Wellness Hub. All rights reserved.
-    <br />
-    Website template created for you. Customize freely with your own photos,
-    logo and wording.
+    © <span id="year"></span> Health &amp; Wellness Hub – Forever Living &amp; organic wellness in Windhoek, Namibia.
   </footer>
 
   <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
