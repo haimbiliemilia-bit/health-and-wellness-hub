@@ -353,4 +353,473 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top:
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .product-cta {
+      margin-top: 0.6rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .product-cta a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: #047857;
+      font-weight: 600;
+    }
+
+    .product-cta a:hover {
+      text-decoration: underline;
+    }
+
+    /* Shop & Join section */
+    .shop-join {
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .shop-card {
+      background: #ffffff;
+      border-radius: 1.2rem;
+      padding: 1.4rem 1.3rem;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+      border-left: 4px solid #16a34a;
+    }
+
+    .shop-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .shop-card p {
+      font-size: 0.86rem;
+      color: #4b5563;
+      margin-bottom: 0.9rem;
+    }
+
+    .shop-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #059669;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Contact / footer */
+    .contact {
+      border-radius: 1.4rem;
+      padding: 1.5rem 1.4rem;
+      background: linear-gradient(135deg, #0f766e, #16a34a);
+      color: #ecfdf3;
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) minmax(0, 2fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact p {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      color: #e0f2f1;
+    }
+
+    .contact-details {
+      font-size: 0.86rem;
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .contact-details a {
+      color: #bbf7d0;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .contact-actions .btn-primary {
+      box-shadow: 0 16px 32px rgba(15, 118, 110, 0.6);
+      background: #ecfdf3;
+      color: #065f46;
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: #e0f7fa;
+    }
+
+    footer {
+      padding: 1.2rem 1.25rem 1.8rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-card {
+        order: -1;
+      }
+      .contact {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">H</div>
+        <div>
+          <div>Health &amp; Wellness</div>
+          <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.12em; color:#6b7280;">
+            Forever Living &amp; organic items
+          </div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#shop-join">Shop &amp; Join</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/264814023718" class="nav-cta">WhatsApp us</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div>
+        <div class="pill">
+          <span class="pill-dot"></span>
+          Natural wellness, delivered
+        </div>
+        <h1>
+          Nourish your body with <span>Forever Living</span> &amp; organic
+          goodness.
+        </h1>
+        <p>
+          Health and Wellness Hub is your trusted source for Forever Living products,
+          clean supplements and organic everyday essentials — carefully chosen to help
+          you live a healthier lifestyle in Windhoek and beyond.
+        </p>
+
+        <div class="hero-tags">
+          <div class="hero-tag">Authorised Forever Living distributor</div>
+          <div class="hero-tag">Organic &amp; natural items</div>
+          <div class="hero-tag">Personal wellness guidance</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/264814023718" class="btn-primary">Browse via WhatsApp</a>
+          <a href="#contact" class="btn-secondary">Talk to us</a>
+          <a href="https://foreverliving.com/shop/zaf/en-za/products"
+             target="_blank"
+             class="btn-secondary">Shop online</a>
+        </div>
+
+        <div class="hero-note">
+          Free advice on product selection for your specific health and wellness goals.
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="What we specialise in">
+        <div class="hero-card-header">
+          <div class="badge-icon">✓</div>
+          <div>
+            <div class="hero-card-title">Health &amp; Wellness Hub</div>
+            <div class="hero-card-subtitle">Natural products. Real results.</div>
+          </div>
+        </div>
+
+        <div class="hero-specialities-title">What we specialise in</div>
+
+        <div class="hero-card-grid">
+          <div class="hero-chip">
+            <div class="hero-chip-title">Forever Living</div>
+            <div class="hero-chip-text">
+              Aloe drinks, supplements, skincare and more.
+            </div>
+          </div>
+          <div class="hero-chip">
+            <div class="hero-chip-title">Organic items</div>
+            <div class="hero-chip-text">
+              Wholefoods, teas, oils and everyday wellness staples.
+            </div>
+          </div>
+          <div class="hero-chip">
+            <div class="hero-chip-title">Wellness combos</div>
+            <div class="hero-chip-text">
+              Bundles for energy, immunity, detox and hormones.
+            </div>
+          </div>
+          <div class="hero-chip">
+            <div class="hero-chip-title">Guided support</div>
+            <div class="hero-chip-text">
+              Recommendations based on your lifestyle and goals.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-label">Genuine products</div>
+            <div class="hero-stat-value">100%</div>
+          </div>
+          <div>
+            <div class="hero-stat-label">Customer support</div>
+            <div class="hero-stat-value">1 : 1</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <h2 class="section-heading">Featured wellness solutions</h2>
+      <p class="section-sub">
+        A small sample of what we offer from Forever Living and other quality brands.
+        Message us for personalised guidance.
+      </p>
+
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <article class="product-card">
+          <img src="0E23B03D-409A-42D2-AFB4-90CF90FBDBE5.PNG"
+               alt="Forever Vitalize and berry image to support hormone health" />
+          <div class="product-body">
+            <div class="product-tag">Hormone support</div>
+            <div class="product-title">Women’s hormone &amp; cycle balance</div>
+            <p class="product-text">
+              Combos designed to support women’s hormones, energy, mood and long-term
+              reproductive health.
+            </p>
+            <div class="product-meta">
+              <span>Great for PMS &amp; peri-menopause</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27m%20interested%20in%20the%20hormone%20support%20products.">
+                Ask about hormone support →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-card">
+          <img src="7F313331-F9C3-49A4-ACA5-9642998AD220.PNG"
+               alt="Forever aloe vera gel product poster" />
+          <div class="product-body">
+            <div class="product-tag">Aloe vera</div>
+            <div class="product-title">Pure aloe vera gel drinks</div>
+            <p class="product-text">
+              99.7% inner leaf aloe vera to support digestion, immunity and everyday
+              wellness from the inside out.
+            </p>
+            <div class="product-meta">
+              <span>Daily gut &amp; immune support</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27d%20like%20to%20know%20more%20about%20aloe%20vera%20gel%20drinks.">
+                Ask about aloe vera →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-card">
+          <img src="0433E067-F23A-45D7-BD71-44E2B6E3B646.PNG"
+               alt="Forever Multi Maca men’s vitality poster" />
+          <div class="product-body">
+            <div class="product-tag">Men’s vitality</div>
+            <div class="product-title">Energy, stamina &amp; performance</div>
+            <p class="product-text">
+              Forever Multi-Maca and supporting products for strength, stamina,
+              circulation and overall male wellness.
+            </p>
+            <div class="product-meta">
+              <span>Supports reproductive health</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27m%20interested%20in%20the%20men%27s%20vitality%20products.">
+                Ask about men’s packs →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-card">
+          <img src="76B0B50E-A0BC-48AE-9F8B-2AB13A0354C9.PNG"
+               alt="Aloe vera gel drink promotional image" />
+          <div class="product-body">
+            <div class="product-tag">Digestive health</div>
+            <div class="product-title">Aloe vera gel drinks &amp; bundles</div>
+            <p class="product-text">
+              Gentle support for digestion, nutrient absorption and natural energy
+              levels, ideal for the whole family.
+            </p>
+            <div class="product-meta">
+              <span>Family-friendly wellness</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27d%20like%20a%20bundle%20for%20digestion%20and%20energy.">
+                Build a wellness bundle →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card">
+          <img src="Blog-Post-Covers.jpg"
+               alt="Collection of Forever Living wellness products" />
+          <div class="product-body">
+            <div class="product-tag">Wellness combos</div>
+            <div class="product-title">Custom packs just for you</div>
+            <p class="product-text">
+              Not sure where to start? We create simple packs for immunity, hormones,
+              weight-management, skin health and more.
+            </p>
+            <div class="product-meta">
+              <span>Personalised recommendations</span>
+            </div>
+            <div class="product-cta">
+              <a href="https://wa.me/264814023718?text=Hi%20I%27d%20like%20a%20personalised%20wellness%20combo.">
+                Get your custom combo →
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SHOP & JOIN -->
+    <section id="shop-join" class="shop-join">
+      <article class="shop-card">
+        <div class="shop-tag">Shop online</div>
+        <h3>Order Forever Living products worldwide</h3>
+        <p>
+          Prefer to shop directly? Use the official Forever Living online shop to
+          order your favourite aloe drinks, supplements and skincare with delivery.
+        </p>
+        <a class="btn-primary"
+           href="https://foreverliving.com/shop/zaf/en-za/products"
+           target="_blank">
+          Visit online shop
+        </a>
+      </article>
+
+      <article class="shop-card">
+        <div class="shop-tag">Join Forever</div>
+        <h3>Build your own wellness business</h3>
+        <p>
+          Discover how to earn, enjoy product discounts and share wellness with
+          others as a Forever Business Owner.
+        </p>
+        <a class="btn-secondary"
+           href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom"
+           target="_blank">
+          Learn about the opportunity
+        </a>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div>
+        <h2>Let’s talk about your wellness goals</h2>
+        <p>
+          Share what you’d like to improve — energy, hormones, digestion, skin,
+          weight, or general wellbeing — and we’ll suggest simple product options
+          that fit your lifestyle and budget.
+        </p>
+
+        <div class="contact-details">
+          <div><strong>Location:</strong> Windhoek, Namibia</div>
+          <div>
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/264814023718">+264&nbsp;81&nbsp;402&nbsp;3718</a>
+          </div>
+          <div>
+            <strong>Call:</strong>
+            <a href="tel:+264814023718">+264&nbsp;81&nbsp;402&nbsp;3718</a>
+          </div>
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:haimbiliemilia@gmail.com">haimbiliemilia@gmail.com</a>
+          </div>
+          <div>
+            <strong>Shop online:</strong>
+            <a href="https://foreverliving.com/shop/zaf/en-za/products" target="_blank">
+              Forever Living online store
+            </a>
+          </div>
+          <div>
+            <strong>Business opportunity:</strong>
+            <a href="https://270003559503.flp.com/live-well-earn-big-discover-a-lifestyle-of-health-wealth-and-freedom"
+               target="_blank">
+              Learn more &amp; join
+            </a>
+          </div>
+          <div>
+            <strong>Social media:</strong> Coming soon – we’ll share our pages once
+            they’re polished.
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-actions">
+        <a class="btn-primary"
+           href="https://wa.me/264814023718?text=Hi%20Emilia%2C%20I%27d%20like%20help%20choosing%20wellness%20products.">
+          Message us on WhatsApp
+        </a>
+        <div class="contact-note">
+          Available most days between 08:00–20:00 (Namibia time).  
+          We’ll reply as soon as we can.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Health &amp; Wellness Hub – Forever Living &amp; organic wellness in Windhoek, Namibia.
+  </footer>
+
+  <script>
+    // update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
